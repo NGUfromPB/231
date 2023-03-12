@@ -22,7 +22,6 @@ public class User {
     private byte age;
 
     @Column(name = "email")
-
     private String email;
 
     public User() {
