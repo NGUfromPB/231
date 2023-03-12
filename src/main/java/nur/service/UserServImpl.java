@@ -7,7 +7,6 @@ import nur.models.User;
 import java.util.List;
 
 @Service
-@Transactional
 public class UserServImpl implements UserServ{
     private final UserDao userDao;
     @Autowired
@@ -25,16 +24,19 @@ public class UserServImpl implements UserServ{
     }
 
     @Override
+    @Transactional
     public void addUser(User user) {
         userDao.addUser(user);
     }
 
     @Override
+    @Transactional
     public void removeUser(long id) {
         userDao.removeUser(id);
     }
 
     @Override
+    @Transactional
     public void updateUser(User user) {
         userDao.updateUser(user);
     }
