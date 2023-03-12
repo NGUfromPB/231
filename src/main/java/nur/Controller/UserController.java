@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Controller
-
 public class UserController {
     private final UserServ userServ;
 
@@ -57,8 +56,4 @@ public class UserController {
         userServ.updateUser(user);
         return "redirect:/";
     }
-
-
-
 }
-
