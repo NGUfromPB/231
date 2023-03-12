@@ -7,7 +7,6 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Component
-@Transactional
 public class UserDaoImpl implements UserDao {
     @PersistenceContext
     private EntityManager entityManager;
