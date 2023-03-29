@@ -2,22 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-    <title>edit</title>
+    <title>Изменение</title>
 </head>
 <body>
 <form th:method="PATCH" th:action="@{/edit}" th:object="${user}">
-  <p>Input latin letters: for name and lastname 2-20</p>
   <label for="name">name</label>
-  <input type="text" th:field="*{name}" id="name" pattern="[A-Za-z]{2,20}">
+  <input type="text" th:field="*{name}" id="name" >
   <br/>
   <label for="lastName">lastname</label>
-  <input type="text" th:field="*{lastName}" id="lastName" pattern="[A-Za-z]{2,20}">
+  <input type="text" th:field="*{lastName}" id="lastName" >
   <br/>
   <label for="age">age</label>
   <input type="text" min="0" max="127" th:field="*{age}" id="age">
   <br/>
   <label for="email"> email</label>
-  <input type="text" th:field="*{email}" id="email" pattern="([A-z0-9_.-]+)@([A-z0-9_.-]+).([A-z]{2,8})">
+  <input type="text" th:field="*{email}" id="email" >
   <br/>
   <input type="submit" value="Update!"/>
 
