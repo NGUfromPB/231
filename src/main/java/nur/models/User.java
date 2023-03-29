@@ -1,6 +1,7 @@
 package nur.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.Pattern;
 
 
 @Entity
@@ -15,7 +16,6 @@ public class User {
     private String name;
 
     @Column(name = "lastname")
-
     private String lastName;
 
     @Column(name = "age")
