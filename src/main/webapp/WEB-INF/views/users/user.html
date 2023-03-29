@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Human</title>
+    <title>Человек</title>
 </head>
 <body>
 <p th:text="${user.name}">Name</p>
@@ -13,7 +13,7 @@
 <form th:method="DELETE" th:action="@{'/'+${user.userId}}">
     <input type="submit" value="Delete!"/>
 </form>
-<form th:method="PATCH" th:action="@{'edit/'+${user.userId}}">
+<form th:action="@{'edit/'+${user.userId}}">
     <input type="submit" value="Update!"/>
 </form>
 </body>
